@@ -1,0 +1,127 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: none;
+  overflow: hidden;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cursor {
+  position: absolute;
+  background-color: #fff;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  z-index: 1;
+  -webkit-transition: 0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  transition: 0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+  transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.cursor:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 100%;
+  background-image: url("http://mirkozeppieri.emanuelepapale.com/wp-content/uploads/2018/07/project-hover-cursor.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+}
+
+.cursor.active {
+  opacity: 1;
+  -webkit-transform: scale(12);
+          transform: scale(12);
+}
+
+.cursor.active:before {
+  opacity: 1;
+}
+
+.cursor-follower {
+  position: absolute;
+  background-color: rgba(225, 225, 225, 0.1);
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  border-radius: 100%;
+  -webkit-transition: 0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity, 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  transition: 0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity, 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity, 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  -webkit-transform: translate(4px, 4px);
+          transform: translate(4px, 4px);
+}
+
+.cursor-follower.active {
+  opacity: 0.3;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.portfolio {
+  width: 100%;
+  height: 100vh;
+  background-color: #161616;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.portfolio__thumb {
+  overflow: hidden;
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.portfolio__thumb img {
+  max-width: 360px;
+  opacity: 0.4;
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+  -webkit-transform-origin: 90% center;
+          transform-origin: 90% center;
+}
+
+.portfolio__item:hover .portfolio__thumb {
+  -webkit-transform: translateX(-1.75rem);
+          transform: translateX(-1.75rem);
+}
+
+.portfolio__item:hover .portfolio__thumb img {
+  opacity: 0.8;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+/*# sourceMappingURL=style.css.map */
